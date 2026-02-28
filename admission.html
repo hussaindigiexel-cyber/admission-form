@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Admission Form</title>
+
+<style>
+@page {
+    size: A4;
+    margin: 15mm;
+}
+
+body{
+    font-family: 'Segoe UI', sans-serif;
+    background:#f2f7f2;
+}
+
+.form-container{
+    width: 210mm;
+    min-height: 297mm;
+    background:white;
+    margin:auto;
+    padding:25px;
+    box-sizing:border-box;
+    border:3px solid #1b5e20;
+}
+
+/* HEADER SECTION */
+.header{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-bottom:3px solid #1b5e20;
+    padding-bottom:15px;
+    margin-bottom:20px;
+    position:relative;
+}
+
+.logo{
+    position:absolute;
+    left:0;
+    width:100px;
+    height:100px;
+    object-fit:contain;
+}
+
+.header-text{
+    text-align:center;
+}
+
+.school-name{
+    font-size:32px;
+    font-weight:bold;
+    color:#1b5e20; 
+    margin:0;
+}
+
+.campus-name{
+    font-size:20px;
+    font-weight:600;
+    color:#c9a000;
+    margin-top:5px;
+}
+
+/* PHOTO AND ADMISSION TITLE SECTION */
+.photo-admission-section{
+    display:flex;
+    justify-content:flex-end;
+    align-items:center;
+    margin-bottom:15px;
+}
+
+.photo-box{
+    width:130px;
+    height:150px;
+    border:2px solid #1b5e20;
+    text-align:center;
+    line-height:150px;
+    font-weight:bold;
+    color:#1b5e20;
+    margin-left:15px;
+}
+
+.admission-title{
+    flex-grow:1;
+    text-align:center;
+    font-size:24px;
+    font-weight:bold;
+    color:#1b5e20;
+}
+
+/* FORM ELEMENTS */
+label{
+    font-weight:600;
+    color:#1b5e20;
+}
+
+input, select, textarea{
+    width:100%;
+    padding:8px;
+    border:1px solid #999;
+    border-radius:4px;
+    margin-top:4px;
+    margin-bottom:12px;
+    font-size:14px;
+}
+
+textarea{
+    resize:none;
+}
+
+/* SIDE BY SIDE ROWS */
+.row{
+    display:flex;
+    gap:25px;  /* Increased gap for more spacing */
+    margin-bottom:12px;
+}
+
+.row div{
+    flex:1;
+}
+
+/* SECTION TITLES */
+.section-title{
+    background:#1b5e20;
+    color:white;
+    padding:6px 10px;
+    margin:15px 0 10px;
+    font-size:15px;
+}
+
+/* SIGNATURES */
+.signature{
+    display:flex;
+    justify-content:space-between;
+    margin-top:60px;
+}
+
+.signature-box{
+    width:250px;
+    text-align:center;
+}
+
+.signature-line{
+    border-top:2px solid #000;
+    margin-top:40px;
+    padding-top:5px;
+    font-weight:600;
+}
+
+/* BUTTON */
+button{
+    padding:8px 20px;
+    background:#1b5e20;
+    color:white;
+    border:none;
+    cursor:pointer;
+    border-radius:4px;
+    margin-top:20px;
+}
+
+@media print{
+    button{
+        display:none;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="form-container">
+
+<div class="header">
+
+    <img src="School.png" class="logo">
+
+    <div class="header-text">
+        <div class="school-name">The Pioneers School & College</div>
+        <div class="campus-name">Jamshoro Campus</div>
+    </div>
+
+</div>
+
+<!-- PHOTO AND ADMISSION TITLE SECTION -->
+<div class="photo-admission-section">
+    <div class="admission-title">      ADMISSION FORM</div>
+    <div class="photo-box">STUDENT PHOTO</div>
+</div>
+
+<form>
+
+<div class="section-title">Personal Information</div>
+
+<label>Student Full Name</label>
+<input type="text">
+
+<label>Father Name</label>
+<input type="text">
+
+<div class="row">
+<div>
+<label>Date of Birth</label>
+<input type="date">
+</div>
+<div>
+<label>Gender</label>
+<select>
+<option>Male</option>
+<option>Female</option>
+<option>Other</option>
+</select>
+</div>
+</div>
+
+<label>Address</label>
+<textarea rows="2"></textarea>
+
+<div class="row">
+<div>
+<label>Phone Number</label>
+<input type="text">
+</div>
+<div>
+<label>Email</label>
+<input type="email">
+</div>
+</div>
+
+<div class="section-title">Academic Information</div>
+
+<div class="row">
+<div>
+<label>Class Applying For</label>
+<input type="text">
+</div>
+<div>
+<label>Previous School</label>
+<input type="text">
+</div>
+</div>
+
+<label>Previous Qualification</label>
+<input type="text">
+
+<div class="signature">
+
+    <div class="signature-box">
+        <div class="signature-line">Parent Signature</div>
+    </div>
+
+    <div class="signature-box">
+        <div class="signature-line">Principal Signature</div>
+    </div>
+
+</div>
+
+<center>
+<button type="button" onclick="window.print()">Print Form</button>
+</center>
+
+</form>
+
+</div>
+
+</body>
+</html>
